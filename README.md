@@ -21,6 +21,15 @@ Based off of: https://github.com/cpow/neovim-for-newbs
 ## ZSH
 Allows for autocompletion and history, greatly increasing workflow.
 
+# TODO 
+    - Add question to ask whether the OS is Windows or Linux
+    - Add tiling functionality depending on OS
+    - Look into cosmic for Linux tiling
+
+# Windows Specific
+Tiling manager glaze: https://github.com/glzr-io/glazewm
+Config file stored manually. Copy file to setup folder.
+
 # Inspiration
 Based off of: https://github.com/cpow/neovim-for-newbs
 
