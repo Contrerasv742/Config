@@ -27,6 +27,10 @@ Allows for autocompletion and history, greatly increasing workflow.
 
 ## WezTerm
 Easy to use on windows and customizable. Helps remove key binding conflicts from the base Windows terminal emulator.
+WSL is better but has many keybing conflicts.
+
+## tmux
+Will help when setting up remote access to systems through SSH, allowing easy system synchronization and usage.
 
 # TODO 
     - Add question to ask whether the OS is Windows or Linux
@@ -34,7 +38,9 @@ Easy to use on windows and customizable. Helps remove key binding conflicts from
     - Look into cosmic for Linux tiling
 
 # Windows Specific
-Tiling manager glaze: https://github.com/glzr-io/glazewm
+
+Glaze: https://github.com/glzr-io/glazewm
+
 Config file stored manually. Copy file to setup folder.
 
 # Inspiration
