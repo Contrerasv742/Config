@@ -20,4 +20,11 @@ bold_italic_font auto
 font_size 12.0
 EOF
 
+# Install Yazi (terminal file manager)
+# TODO: Add installation steps
+# 1) rustup
+# 2) install
+#
+# TODO: Install TMUX + add a configuration file
+
 success "Terminal setup completed!"

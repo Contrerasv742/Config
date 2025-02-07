@@ -10,6 +10,10 @@ Note:
     After Installing packages reload the terminal and or VM/PC. 
     This allows the terminal to properly source the fonts.
 
+# Setup: Windows
+
+![Screenshot](imgs/windows/Window_manager_and_tmux_config.png)
+
 # Components and Reasoning
 ## Neovim Config
 Based off of: https://github.com/cpow/neovim-for-newbs
@@ -20,6 +24,9 @@ Based off of: https://github.com/cpow/neovim-for-newbs
 
 ## ZSH
 Allows for autocompletion and history, greatly increasing workflow.
+
+## WezTerm
+Easy to use on windows and customizable. Helps remove key binding conflicts from the base Windows terminal emulator.
 
 # TODO 
     - Add question to ask whether the OS is Windows or Linux

@@ -1,3 +1,5 @@
+# Glaze Tiling Manager Configuration File
+
 general:
   # Commands to run when the WM has started (e.g. to run a script or launch
   # another application). Here we are running a batch script to start Zebar.
