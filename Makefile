@@ -4,6 +4,7 @@ NVIM_DIR := $(HOME_DIR)/.config/nvim
 TMUX_DIR := $(HOME_DIR)/.config/tmux
 TMUX_CONF := $(TMUX_DIR)/tmux.conf
 WEZTERM_CONF := /mnt/c/Users/thedo/.wezterm.lua
+GLAZE_CONF := /mnt/c/Users/thedo/.glzr/glazewm/config.yaml
 
 REPO_ROOT := $(shell pwd)
 SETUP_DIR := $(REPO_ROOT)/setup_files
@@ -46,6 +47,14 @@ copy: $(SETUP_DIR)
 		echo "Warning: $(WEZTERM_CONF) not found"; \
 	fi
 
+
+	@if [ -f "$(GLAZE_CONF)" ]; then \
+		echo "Copying glaze config.yaml"; \
+		cp $(GLAZE_CONF) $(SETUP_DIR)/config.yaml; \
+	else \
+		echo "Warning: $(GLAZE_CONF) not found"; \
+	fi
+
 setup: clean link
 
 link: $(SETUP_DIR)
@@ -73,6 +82,14 @@ link: $(SETUP_DIR)
 		ln -sf $(WEZTERM_CONF) $(SETUP_DIR)/wezterm.lua; \
 	else \
 		echo "Error: $(WEZTERM_CONF) not found"; \
+		exit 1; \
+	fi
+
+	@if [ -f "$(GLAZE_CONF)" ]; then \
+		echo "Linking glaze config.yaml"; \
+		ln -sf $(GLAZE_CONF) $(SETUP_DIR)/config.yaml; \
+	else \
+		echo "Error: $(GLAZE_CONF) not found"; \
 		exit 1; \
 	fi
 
@@ -135,4 +152,8 @@ clean:
 	@if [ -f "$(SETUP_DIR)/wezterm.lua" ]; then \
 		echo "Deleting the repository file wezterm.lua"; \
 		rm $(SETUP_DIR)/wezterm.lua; \
+	fi
+	@if [ -f "$(SETUP_DIR)/config.yaml" ]; then \
+		echo "Deleting the repository file config.yaml"; \
+		rm $(SETUP_DIR)/config.yaml; \
 	fi
