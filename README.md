@@ -33,9 +33,14 @@ WSL is better but has many keybing conflicts.
 Will help when setting up remote access to systems through SSH, allowing easy system synchronization and usage.
 
 # TODO 
-    - Add question to ask whether the OS is Windows or Linux
-    - Add tiling functionality depending on OS
-    - Look into cosmic for Linux tiling
+## High Priority
+[ ] Integrate Tmux
+[ ] Integrate WezTerm (install script + grabbing the file from the setup_files)
+
+## Lower Priority
+[ ] Add question to ask whether the OS is Windows or Linux
+[ ] Add tiling functionality depending on OS
+[ ] Look into cosmic for Linux tiling
 
 # Windows Specific
 

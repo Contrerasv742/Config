@@ -3,6 +3,7 @@
 
 log "Setting up terminal environment..."
 
+# TODO: Remove and setup WezTerm
 # Install Kitty terminal (optional - remove if not needed)
 curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
 
