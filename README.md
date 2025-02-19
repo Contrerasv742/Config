@@ -21,10 +21,11 @@ make
 ```
 
 ```bash
-# Setups up the directory with local machines files to the repository
-# Relies on the default locations specified by the repository
-make setup
+# Prep the files for uploading to GitHub
+make upload
 ```
+*Note:* 
+Prepping in the Makefile works for my system. Specify the file locations if you need to move them. For instance, .wezterm.lua is located in __/mnt/c/Users/{username}/__. Depending on your system username it may need to be updated.
 
 # Setup: Windows
 
@@ -50,13 +51,13 @@ Will help when setting up remote access to systems through SSH, allowing easy sy
 
 # TODO 
 ## High Priority
-[ ] Integrate Tmux
-[ ] Integrate WezTerm (install script + grabbing the file from the setup_files)
+- [ ] Integrate Tmux
+- [ ] Integrate WezTerm (install script + grabbing the file from the setup_files)
 
 ## Lower Priority
-[ ] Add question to ask whether the OS is Windows or Linux
-[ ] Add tiling functionality depending on OS
-[ ] Look into cosmic for Linux tiling
+- [ ] Add question to ask whether the OS is Windows or Linux
+- [ ] Add tiling functionality depending on OS
+- [ ] Look into cosmic for Linux tiling
 
 # Windows Specific
 
