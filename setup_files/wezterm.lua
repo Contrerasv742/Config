@@ -1,1 +1,0 @@
-/root/mnt/users/root/.wezterm.lua

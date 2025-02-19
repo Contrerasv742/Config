@@ -3,7 +3,7 @@ HOME_DIR := $(shell echo $(HOME))
 NVIM_DIR := $(HOME_DIR)/.config/nvim
 TMUX_DIR := $(HOME_DIR)/.config/tmux
 TMUX_CONF := $(TMUX_DIR)/tmux.conf
-WEZTERM_CONF := $(HOME_DIR)/.wezterm.lua
+WEZTERM_CONF := /mnt/c/Users/thedo/.wezterm.lua
 
 REPO_ROOT := $(shell pwd)
 SETUP_DIR := $(REPO_ROOT)/setup_files
@@ -70,7 +70,7 @@ link: $(SETUP_DIR)
 	
 	@if [ -f "$(WEZTERM_CONF)" ]; then \
 		echo "Linking .wezterm.lua file..."; \
-		ln -sf $(WEZTERM_CONF) $(SETUP_DIR)/.wezterm.lua; \
+		ln -sf $(WEZTERM_CONF) $(SETUP_DIR)/wezterm.lua; \
 	else \
 		echo "Error: $(WEZTERM_CONF) not found"; \
 		exit 1; \
@@ -121,18 +121,18 @@ endif
 clean:
 	@echo "Cleaning repository files..."
 	@if [ -d "$(SETUP_DIR)/nvim" ]; then \
-		echo "Deleting the local nvim directory"; \
+		echo "Deleting the repository file nvim directory"; \
 		rm -rf $(SETUP_DIR)/nvim; \
 	fi
 	@if [ -f "$(SETUP_DIR)/tmux.conf" ]; then \
-		echo "Deleting the local tmux.conf"; \
+		echo "Deleting the repository file tmux.conf"; \
 		rm $(SETUP_DIR)/tmux.conf; \
 	fi
 	@if [ -f "$(SETUP_DIR)/.wezterm.lua" ]; then \
-		echo "Deleting the local .wezterm.lua"; \
+		echo "Deleting the repository file .wezterm.lua"; \
 		rm $(SETUP_DIR)/.wezterm.lua; \
 	fi
 	@if [ -f "$(SETUP_DIR)/wezterm.lua" ]; then \
-		echo "Deleting the local wezterm.lua"; \
+		echo "Deleting the repository file wezterm.lua"; \
 		rm $(SETUP_DIR)/wezterm.lua; \
 	fi
