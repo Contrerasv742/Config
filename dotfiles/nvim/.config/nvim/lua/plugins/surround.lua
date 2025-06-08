@@ -4,7 +4,6 @@ return {
     event = "VeryLazy",
     config = function()
         require("nvim-surround").setup({
-            -- Custom keymaps configuration
         })
     end
 }

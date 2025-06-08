@@ -19,3 +19,23 @@ vim.keymap.set('n', '<c-l>', ':wincmd l<CR>')
 
 vim.keymap.set('n', '<leader>h', ':nohlsearch<CR>')
 vim.wo.number = true
+
+-- Highlight Groups
+vim.cmd([[
+  highlight TodoKeyword ctermfg=177 guifg=#cba6f7 cterm=bold gui=bold
+  highlight ErrorKeyword ctermfg=177 guifg=#cba6f7 cterm=bold gui=bold
+  highlight FixmeKeyword ctermfg=177 guifg=#cba6f7 cterm=bold gui=bold 
+  highlight DoxygenTag ctermfg=177 guifg=#cba6f7 cterm=bold gui=bold
+]])
+
+-- Extend your autocommand
+vim.api.nvim_create_autocmd({"BufRead", "BufNewFile"}, {
+  pattern = "*",
+  callback = function()
+    vim.fn.matchadd("TodoKeyword", "\\<\\(TODO\\|XXX\\)\\>")
+    vim.fn.matchadd("ErrorKeyword", "\\<ERROR\\>")
+    vim.fn.matchadd("FixmeKeyword", "\\<FIXME\\>")
+    -- Highlight Doxygen tags like @brief, @param, @return, etc.
+    vim.fn.matchadd("DoxygenTag", "@\\w\\+")
+  end,
+})

@@ -32,10 +32,17 @@ function y() {
 alias ls="ls --color=auto"
 alias la="ls -al"
 
+alias open="xdg-open"
+
 # Catpuccin Coloring
 # Load zsh-syntax-highlighting
 source ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+# Start tmux server if not already running, but don't attach
+if command -v tmux &> /dev/null && [ -z "$TMUX" ] && ! tmux info &> /dev/null; then
+    tmux start-server
+fi
 
 # Auto-suggestion settings
 ZSH_AUTOSUGGEST_STRATEGY=(history completion)
@@ -78,8 +85,6 @@ ZSH_HIGHLIGHT_STYLES[arg0]=fg=#a6e3a1
 export LS_COLORS=$(vivid generate catppuccin)
 
 export PATH="$PATH:/home/panda/.local/opt/zen"
-
-alias open="xdg-open"
 
 # ECE 118 Paths
 export PATH=$PATH:/opt/microchip/xc32/v4.35/bin

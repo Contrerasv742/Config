@@ -1,0 +1,222 @@
+/* Rofi QuickSettings Theme */
+/* Save this as ~/.config/waybar/themes/quicksettings.rasi */
+
+* {
+    /* Catppuccin Mocha Colors */
+    base:           rgba(30, 30, 46, 0.98);
+    mantle:         #181825;
+    crust:          #11111b;
+    text:           #cdd6f4;
+    subtext0:       #a6adc8;
+    subtext1:       #bac2de;
+    surface0:       #313244;
+    surface1:       #45475a;
+    surface2:       #585b70;
+    overlay0:       #6c7086;
+    overlay1:       #7f849c;
+    overlay2:       #9399b2;
+    blue:           #89b4fa;
+    lavender:       #b4befe;
+    sapphire:       #74c7ec;
+    sky:            #89dceb;
+    teal:           #94e2d5;
+    green:          #a6e3a1;
+    yellow:         #f9e2af;
+    peach:          #fab387;
+    maroon:         #eba0ac;
+    red:            #f38ba8;
+    mauve:          #cba6f7;
+    pink:           #f5c2e7;
+    flamingo:       #f2cdcd;
+    rosewater:      #f5e0dc;
+    
+    background-color: transparent;
+    font: "JetBrainsMono Nerd Font Propo 10";
+}
+
+window {
+    location:           northeast;
+    anchor:             northeast;
+    x-offset:           -15px;
+    y-offset:           45px;
+    width:              400px;
+    height:             520px;
+    background-color:   @base;
+    border:             2px;
+    border-color:       @surface1;
+    border-radius:      12px;
+    padding:            0px;
+}
+
+mainbox {
+    background-color:   transparent;
+    children:           [ "listview" ];
+    spacing:            0px;
+    padding:            0px;
+}
+
+inputbar {
+    enabled:            false;
+}
+
+listview {
+    background-color:   transparent;
+    padding:            12px;
+    spacing:            6px;
+    scrollbar:          false;
+    fixed-height:       true;
+    dynamic:            false;
+    lines:              12;
+    columns:            1;
+}
+
+element {
+    background-color:   rgba(49, 50, 68, 0.4);
+    text-color:         @text;
+    orientation:        horizontal;
+    border-radius:      8px;
+    padding:            12px 16px;
+    margin:             1px 0px;
+    cursor:             pointer;
+    border:             1px;
+    border-color:       rgba(69, 71, 90, 0.5);
+}
+
+element-text {
+    background-color:   transparent;
+    text-color:         inherit;
+    highlight:          inherit;
+    cursor:             inherit;
+    vertical-align:     0.5;
+    horizontal-align:   0.0;
+    font:               inherit;
+    markup:             true;
+}
+
+/* Header row styling */
+element normal.normal {
+    background-color:   rgba(49, 50, 68, 0.4);
+    text-color:         @text;
+    border-color:       rgba(69, 71, 90, 0.5);
+}
+
+element alternate.normal {
+    background-color:   rgba(45, 45, 65, 0.4);
+    text-color:         @text;
+    border-color:       rgba(69, 71, 90, 0.5);
+}
+
+/* Selected states */
+element selected.normal {
+    background-color:   rgba(137, 180, 250, 0.25);
+    text-color:         @blue;
+    border-color:       @blue;
+}
+
+element selected.alternate {
+    background-color:   rgba(137, 180, 250, 0.25);
+    text-color:         @blue;
+    border-color:       @blue;
+}
+
+/* Active states - for enabled items */
+element normal.active {
+    background-color:   rgba(166, 227, 161, 0.2);
+    text-color:         @green;
+    border-color:       rgba(166, 227, 161, 0.6);
+}
+
+element alternate.active {
+    background-color:   rgba(166, 227, 161, 0.2);
+    text-color:         @green;
+    border-color:       rgba(166, 227, 161, 0.6);
+}
+
+element selected.active {
+    background-color:   rgba(166, 227, 161, 0.3);
+    text-color:         @green;
+    border-color:       @green;
+}
+
+/* Urgent states - for disabled items */
+element normal.urgent {
+    background-color:   rgba(243, 139, 168, 0.2);
+    text-color:         @red;
+    border-color:       rgba(243, 139, 168, 0.6);
+}
+
+element alternate.urgent {
+    background-color:   rgba(243, 139, 168, 0.2);
+    text-color:         @red;
+    border-color:       rgba(243, 139, 168, 0.6);
+}
+
+element selected.urgent {
+    background-color:   rgba(243, 139, 168, 0.3);
+    text-color:         @red;
+    border-color:       @red;
+}
+
+/* Hover effects */
+/*
+element:hover {
+    background-color:   rgba(69, 71, 90, 0.6);
+    text-color:         @lavender;
+    border-color:       @surface2;
+    transform:          scale(1.02);
+    transition:         all 0.1s ease;
+}
+
+element selected:hover {
+    background-color:   rgba(137, 180, 250, 0.35);
+    text-color:         @lavender;
+    border-color:       @blue;
+}
+
+element active:hover {
+    background-color:   rgba(166, 227, 161, 0.3);
+    text-color:         @green;
+    border-color:       @green;
+}
+
+element urgent:hover {
+    background-color:   rgba(243, 139, 168, 0.3);
+    text-color:         @red;
+    border-color:       @red;
+}
+*/
+
+/* Special formatting for different row types */
+
+/* Header row - make it stand out */
+element.header {
+    background-color:   rgba(137, 180, 250, 0.15);
+    text-color:         @blue;
+    font:               "JetBrainsMono Nerd Font Propo Bold 11";
+    border-color:       rgba(137, 180, 250, 0.4);
+    padding:            14px 16px;
+}
+
+/* WiFi and Bluetooth rows - structured layout */
+element.connection {
+    background-color:   rgba(116, 199, 236, 0.15);
+    border-color:       rgba(116, 199, 236, 0.4);
+    padding:            14px 16px;
+    font:               "JetBrainsMono Nerd Font Propo 10";
+}
+
+/* Button rows - clean minimal style */
+element.button {
+    background-color:   rgba(203, 166, 247, 0.15);
+    border-color:       rgba(203, 166, 247, 0.4);
+    padding:            10px 16px;
+    font:               "JetBrainsMono Nerd Font Propo 10";
+}
+
+/* Slider rows - expanded for controls */
+element.slider {
+    background-color:   rgba(180, 190, 254, 0.15);
+    border-color:       rgba(180, 190, 254, 0.4);
+    padding:            14px 16px;
+    font:               "JetBrainsMono Nerd Font Propo 10";
+}
