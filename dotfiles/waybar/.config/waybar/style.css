@@ -64,7 +64,7 @@ window#waybar{
 }
 tooltip {
     background:@mantle;
-    color: @color7;
+    color: @lavender;
 }
 
 /* Module Configurations */
@@ -83,22 +83,23 @@ tooltip {
 #custom-notification {
     padding: 0px 5px;
     transition: all .3s ease;
-    color:@color7;
+    color:@lavender;
 }
 #custom-power {
     padding: 0px 5px;
     transition: all .3s ease;
-    background-color:@color7;
+    background-color:@base;
+    color:@blue;
 }
 #clock {
     padding: 0px 5px;
-    color:@color7;
+    color:@lavender;
     transition: all .3s ease;
 }
 #custom-pacman {
     padding: 0px 5px;
     transition: all .3s ease;
-    color:@color7;
+    color:@lavender;
 
 }
 
@@ -120,7 +121,7 @@ tooltip {
     color: @teal;
     border: none;
     padding: 0px 10px;
-        margin: 0px 4px;
+    margin: 0px 4px;
     min-width:25px;
     background-color: @teal;
     border-radius: 10px;
@@ -137,7 +138,7 @@ tooltip {
 #workspaces button.empty.active {
     color: @teal;
     border: none;
-        text-shadow: none;
+    text-shadow: none;
 }
 
 /* Other settings */
@@ -153,11 +154,10 @@ tooltip {
     color:@sapphire;
 
 }
-
 #battery{
     padding: 0px 5px;
     transition: all .3s ease;
-    color:@color7;
+    color:@lavender;
 }
 #battery.charging {
     color: @green;
@@ -195,7 +195,7 @@ tooltip {
 #cpu,#memory,#temperature{
     padding: 0px 5px;
     transition: all .3s ease; 
-    color:@color7;
+    color:@lavender;
 
 }
 #custom-endpoint{
