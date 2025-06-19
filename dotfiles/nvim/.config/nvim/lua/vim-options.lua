@@ -39,3 +39,11 @@ vim.api.nvim_create_autocmd({"BufRead", "BufNewFile"}, {
     vim.fn.matchadd("DoxygenTag", "@\\w\\+")
   end,
 })
+
+-- File Text Wrapping
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = {"html" },
+  callback = function()
+    vim.opt_local.textwidth = 90
+  end,
+})

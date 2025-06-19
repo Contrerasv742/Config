@@ -19,6 +19,8 @@ return {
                     "html",
                     "tailwindcss",
                     "tinymist",
+                    "ts_ls",
+                    "harper_ls",
                 },
                 automatic_installation = true,
             })
@@ -63,11 +65,16 @@ return {
                 capabilities = capabilities,
             })
 
-            -- Tailwind CSS LSP
+            -- Configure CSS
             lspconfig.tailwindcss.setup({
                 filetypes = { "html", "javascriptreact", "typescriptreact" },
                 capabilities = capabilities, -- Add capabilities here
             })
+
+            lspconfig.cssmodules_ls.setup({ capabilities = capabilities })
+
+            -- Configure JavaScript LSP
+            lspconfig.ts_ls.setup({ capabilities = capabilities })
 
             -- Configure Typst LSP
             lspconfig.tinymist.setup({
@@ -76,6 +83,17 @@ return {
                 root_dir = function(fname)
                     return lspconfig.util.find_git_ancestor(fname) or vim.fn.getcwd()
                 end,
+            })
+
+            -- Spell Checking LSP
+            lspconfig.harper_ls.setup({
+                filetypes = { "html", "markdown", "css", "typst", "text", },
+                extend_words = {
+                    "nvim", "neovim", "lsp", "lspconfig",
+                    "vim", "lua", "js", "html", "css",
+                    "CSE", "ECE", "UC", "btw",
+                },
+                capabilities = capabilities
             })
 
             -- Keybindings (unchanged)

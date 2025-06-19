@@ -67,6 +67,7 @@
     0% {
         box-shadow: 0 0 10px alpha(@red, 0.3);
     }
+
     100% { 
         box-shadow: 0 0 10px alpha(@red, 0.3);
     }
@@ -245,14 +246,20 @@
 }
 
 /* Widget Title (Header) */
-.widget-title {
+.widget-title,
+.widget-label { 
     padding: 16px 20px 8px 20px;
     margin: 0;
     color: @text;
     border-bottom: 1px solid @surface1;
 }
 
-.widget-title > button {
+.widget-label { 
+
+}
+
+.widget-title > button,
+.widget-label > button {
     font-size: 14px;
     color: @text;
     background: alpha(@red, 0.2);
@@ -266,7 +273,8 @@
     font-weight: 500;
 }
 
-.widget-title > button:hover {
+.widget-title > button:hover,
+.widget-label > button:hover {
     background: alpha(@red, 0.3);
     border-color: @red;
     color: @red;
@@ -382,8 +390,8 @@
 .widget-volume,
 .widget-backlight {
     background: transparent;
-    padding: 0px 6px;
-    margin: 3px 16px;
+    padding: 6px;
+    margin: 6px 16px;
     border-radius: 12px;
 }
 
@@ -396,31 +404,31 @@ trough {
 }
 
 trough highlight {
-    background: linear-gradient(90deg, @lavender, @teal);
+    background: linear-gradient(90deg, @blue, @teal);
     border-radius: 12px;
-    box-shadow: 0 0 8px alpha(@lavender, 0.3);
+    box-shadow: 0 0 8px alpha(@blue, 0.3);
     transition: all 0.3s ease;
 }
 
 trough highlight:hover {
-    box-shadow: 0 0 12px alpha(@lavender, 0.5);
+    box-shadow: 0 0 12px alpha(@blue, 0.5);
 }
 
 trough slider {
     background: @text;
-    border: 2px solid @lavender;
+    border: 2px solid @blue;
     border-radius: 50%;
-    min-height: 14px;
-    min-width: 14px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+    min-height: 16px;
+    min-width: 16px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
     transition: all 0.2s ease;
 }
 
 trough slider:hover {
-    background: @lavender;
+    background: @blue;
     min-height: 20px;
     min-width: 20px;
-    box-shadow: 0 4px 12px alpha(@lavender, 0.4);
+    box-shadow: 0 4px 12px alpha(@blue, 0.4);
 }
 
 /* Menu Buttons */
