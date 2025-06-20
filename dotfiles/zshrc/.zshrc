@@ -5,9 +5,10 @@ export PGHOST="/var/run/postgresql"
 export PATH=$PATH:/usr/local/go/bin
 
 # ZSH History stuff
-HISTFILE=~/.history
-HISTSIZE=10000
-SAVEHIST=50000
+export HISTFILE=~/.history
+export HISTSIZE=10000
+export SAVEHIST=50000
+export FUNCNEST=10000
 
 setopt inc_append_history
 
@@ -89,7 +90,10 @@ export PATH="$PATH:/home/panda/.local/opt/zen"
 # ECE 118 Paths
 export PATH=$PATH:/opt/microchip/xc32/v4.35/bin
 
+# Alias for adjusting PC settings
+export PC=1
+
 # Scripts
-~/Scripts/fastfetch.sh
+~/.config/fastfetch/pokemon.sh
 
 eval "$(starship init zsh)"
