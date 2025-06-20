@@ -6,7 +6,7 @@
     /* Module Select */
     "modules-left": ["custom/notification","clock","tray"],
     "modules-center": ["hyprland/workspaces"],
-    "modules-right": ["group/expand","wireplumber","bluetooth","network","battery","custom/power"],
+    "modules-right": ["group/expand","wireplumber","bluetooth","network","custom/power"],
 
     "hyprland/workspaces": {
         "format": "{icon}",
@@ -87,8 +87,9 @@
     },
     "wireplumber": {
         "format": "{icon} {volume:2}%",
-        "format-bluetooth": "{icon}  {volume}%",
+        "format-bluetooth": "{icon} {volume}%",
         "format-muted": "MUTED",
+        // "format-muted": "",
         "format-icons": {
             "headphones": "",
             "default": [
